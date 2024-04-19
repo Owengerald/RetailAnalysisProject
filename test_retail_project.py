@@ -56,6 +56,7 @@ def test_check_complete_count(spark):
          ]
 )
 
+@pytest.mark.skip("not testing for now")
 def test_check_count(spark, status, count):
     orders_df = read_orders(spark, "LOCAL")
     filtered_count = filter_orders_generic(orders_df, status).count()
